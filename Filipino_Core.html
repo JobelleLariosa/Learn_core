@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Filipino</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="website icon" type="png" href="img/LearnCore3.png" id="logo1" style="border-radius: 100%;">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+     <!-- google font cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+
+    <!-- import jqueryy and bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    
+
+    <style>
+        .Maincontainer {
+            background-image: url(img/backgroundlearn_core.png);
+            min-height: 100vh;
+            justify-items: center;
+        }
+
+        :root {
+            --gradient: linear-gradient(90deg, #806905dc, #d4902a);
+        }
+
+        * {
+            font-family: 'Rokkitt', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all linear;
+        }
+
+        *::selection {
+            background: #ebb70c;
+            color: #fff12cec;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        html::-webkit-scrollbar {
+            width: 1.5rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #ebcf32d7;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: linear-gradient(#ffd382e7, #e6b531);
+        }
+
+        .wrapper {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .selection-img {
+            width: 50%;
+        }
+
+        .selection-img2 {
+            width: 100%;
+        }
+
+        .card-img-container {
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 100%;
+        }
+
+        .card-shadow {
+            box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 2rem;
+        }
+
+        .row {
+            padding-bottom: 20px;
+            row-gap: 20px;
+        }
+
+        .card-text {
+            text-align: left;
+            font-size: 17px;
+        }
+
+        .card-title {
+            text-align: left;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .logo {
+            border-radius: 100%;
+        }
+
+        .Subjects {
+            font-size: 10px;
+            color: black;
+            border-radius: 100%;
+        }
+
+        .image {
+            border-radius: 30%;
+        }
+
+        .card-img-container {
+            border-radius: 100%;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 1.5rem 7%;
+            background-image: url(img/backgroundlearn_core.png);
+            box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .4);
+        }
+
+        header .Subjects {
+            border-radius: 100%;
+        }
+
+        header .Subjects ul {
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            list-style: none;
+            font-size: 20px;
+        }
+
+        header .Subjects ul li {
+            margin: 0 1rem;
+        }
+
+        header .Subjects ul li a {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        header .Subjects ul li a:hover {
+            color: #0c22eb;
+        }
+
+        header #Help {
+            font-size: 3rem;
+            color: #ffff;
+            cursor: pointer;
+        }
+
+        header #login:hover {
+            color: #0c22eb;
+        }
+
+        .log_in {
+            font-size: 15px;
+        }
+
+        header #menu {
+            font-size: 3rem;
+            color: #ffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        header #mathing {
+            font-size: 25px;
+            color: aliceblue;
+            justify-content: left;
+        }
+
+        .card-img-top-selection-img {
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 100%;
+        }
+
+        body {
+            -webkit-text-size-adjust: 50%;
+            background-image: url(img/backgroundpic.webp);
+        }
+
+        .quiz-container {
+            background: aliceblue;
+            box-shadow: 0 0 20px 2px rgb(100, 100, 100, 1.5rem);
+            width: 450px;
+        }
+
+        .quiz-header {
+            padding: 4rem;
+        }
+
+        h2 {
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+            font-size: 35px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 28px;
+            margin: 1rem;
+        }
+
+        ul li label {
+            cursor: pointer;
+        }
+
+        button {
+            background: #0c22eb;
+            color: #ffff;
+            border: none;
+            display: block;
+            width: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            padding: 1.1rem;
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function(Addname){
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-factorial').hide()
+            $('#div-Pemdas').hide();
+    });
+
+    function Addname(){
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name');
+
+        if (name !== null) {
+            document.getElementById('welcomeName').innerHTML = "Welcome " + name + "! Please select a topic to learn.";
+            document.getElementById('modalTitle').innerHTML = "Hi " + name + "!";
+        }
+    }
+    
+
+    function showDiv(name){
+        if (name=="Addition"){
+            $('#div-addition').slideToggle();
+            $('#main-menu').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Subtraction"){
+            $('#div-subtraction').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Multiplication"){
+            $('#div-multiplication').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Division"){
+            $('#div-division').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="CompNum"){
+            $('#div-compare').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-multip').hide();
+            $('#div-division').hide();
+        }
+
+        if (name=="MultiplicationTabs"){
+            $('#div-multip').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-compare').hide();
+            $('#div-division').hide();
+        }
+
+        if (name=="Menu"){
+            $('#main-menu').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide(); 
+            $('#LectureAdd').hide();
+            $('#VideosAdd').hide();
+            $('#QuizAdd').hide();
+            $('#LectureSub').hide();
+            $('#QuizSub').hide();
+            $('#VideosSub').hide();
+            $('#LectureMul').hide();
+            $('#QuizMul').hide();
+            $('#VideosMul').hide();
+            $('#LectureDiv').hide();
+            $('#VideosDiv').hide();
+            $('#QuizDiv').hide();
+            $('#LectureCompare').hide();
+            $('#VideosCompare').hide();
+            $('#QuizCompare').hide();
+            $('#QuizMultip').hide();
+            $('#LectureMultip').hide();
+            $('#VideosMultip').hide();
+
+        }
+    }
+
+        function LectureComAddition(name){
+
+            if (name == "LecMaterialsAdd"){
+                $('#LectureAdd').slideToggle(1500);
+                $('#VideosAdd').hide();
+                $('#QuizAdd').hide();
+                $('#div-addition').hide();
+                $('#main-menu').hide();
+            }
+            if (name == "LecVideosAdd"){
+                $('#VideosAdd').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#QuizAdd').hide();
+                $('#div-addition').hide();
+            }
+
+            if (name == "FunQuizAdd"){
+                $('#QuizAdd').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#VideosAdd').hide();
+                $('#div-addition').hide();
+            }
+
+            if (name == "FunQuizAdd1"){
+                $('#quizlink').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#LectureAdd').hide();
+                $('#VideosAdd').hide();
+                $('#div-addition').hide();
+                $('#hidden').hide();
+
+        }
+
+        if(name == "Menu1"){
+                $('#div-addition').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#VideosAdd').hide();
+                $('#QuizAdd').hide();
+            }
+
+    }
+
+            function LectureComSubration(name){
+            if (name == "LecMaterialsSub"){
+                $('#LectureSub').slideToggle(1500);
+                $('#VideosSub').hide();
+                $('#QuizSub').hide();
+                $('#div-subtraction').hide();
+
+            }
+
+            if (name == "LecVideosSub"){
+                $('#VideosSub').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#QuizSub').hide();
+                $('#div-subtraction').hide();
+            }
+
+            if (name == "FunQuizSub"){
+                $('#QuizSub').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#VideosSub').hide();
+                $('#div-subtraction').hide();
+            }
+
+            if(name == "Menu2"){
+                $('#div-subtraction').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#VideosSub').hide();
+                $('#QuizSub').hide();
+                $('#hidden').hide();
+                $('#quizlink2').hide();
+
+            }
+
+            if (name == "FunQuizAdd1"){
+                $('#quizlink2').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#VideosSub').hide();
+                $('#div-subtraction').hide();
+                $('#hidden').hide();
+                $('#QuizSub').hide();
+
+
+        }
+            }
+
+        function LectureComMultiplication(name){
+            if (name == "LecMaterialsMul"){
+                $('#LectureMul').slideToggle(1500);
+                $('#VideosMul').hide();
+                $('#QuizSubMul').hide();
+                $('#div-multiplication').hide();
+
+            }
+
+            if (name == "LecVideosMul"){
+                $('#VideosMul').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#QuizMul').hide();
+                $('#div-multiplication').hide();
+            }
+
+            if (name == "FunQuizMul"){
+                $('#QuizMul').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#VideosMul').hide();
+                $('#div-multiplication').hide();
+            }
+
+            if(name == "Menu3"){
+                $('#div-multiplication').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#VideosMul').hide();
+                $('#QuizMul').hide();
+                $('#hidden').hide();
+                $('#quizlink3').hide();
+            }
+
+
+            if (name == "FunQuizMul1"){
+                $('#quizlink3').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#VideosMul').hide();
+                $('#div-multiplication').hide();
+                $('#hidden').hide();
+                $('#QuizMul').hide();
+
+
+        }
+        }
+
+        function LectureComDivision(name){
+            if (name == "LecMaterialsDiv"){
+                $('#LectureDiv').slideToggle(1500);
+                $('#VideosDiv').hide();
+                $('#QuizDiv').hide();
+                $('#div-division').hide();
+
+            }
+
+            if (name == "LecVideosDiv"){
+                $('#VideosDiv').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#QuizDiv').hide();
+                $('#div-division').hide();
+            }
+
+            if (name == "FunQuizDiv"){
+                $('#QuizDiv').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#VideosDiv').hide();
+                $('#div-division').hide();
+            }
+        
+            if(name == "Menu4"){
+                $('#div-division').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#VideosDiv').hide();
+                $('#QuizDiv').hide();
+                $('#hidden').hide();
+                $('#quizlink4').hide();
+             }
+        }
+        function LectureComCompare(name){
+            if (name == "LecMaterialsCompare"){
+                $('#LectureCompare').slideToggle(1500);
+                $('#VideosCompare').hide();
+                $('#QuizCompare').hide();
+                $('#div-compare').hide();
+
+            }
+
+            if (name == "LecVideosCompare"){
+                $('#VideosCompare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#QuizCompare').hide();
+                $('#div-compare').hide();
+            }
+
+            if (name == "FunQuizCompare"){
+                $('#QuizCompare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#VideosCompare').hide();
+                $('#div-compare').hide();
+            }
+            if (name == "Menu5"){
+                $('#div-compare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#VideosCompare').hide();
+                $('#QuizCompare').hide();
+            }
+        }
+
+        function LectureComMultip(name){
+            if (name == "LecMaterialsMultip"){
+                $('#LectureMultip').slideToggle(1500);
+                $('#VideosMultip').hide();
+                $('#QuizMultip').hide();
+                $('#div-multip').hide();
+
+            }
+
+            if (name == "LecVideosMultip"){
+                $('#VideosMultip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#QuizMultip').hide();
+                $('#div-multip').hide();
+            }
+
+            if (name == "FunQuizMultip"){
+                $('#QuizMultip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#VideosMultip').hide();
+                $('#div-multip').hide();
+            }
+
+            if(name == "Menu6"){ 
+                $('#div-multip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#VideosMultip').hide();
+                $('#QuizMultip').hide();
+                $('#hidden').hide();
+             }
+
+
+        }
+    
+          
+        
+
+</script>
+
+   </head>
+   <body onload="Addname()">
+     <!---Header starts-->
+     <div class = "Maincontainer">
+        <header>
+  
+         <a><img src="img/LearnCore3.png" width="100" height ="100" class = "logo"></a>
+          <nav class = "Subjects">
+        
+            <ul>
+                
+                <li><a href="Home1.html">Home</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="Front_page.html">Sign Out</a></li>
+
+           </ul>
+        </nav>
+       
+    </header>
+
+        <div class="mainContainer">
+            <div class="container wrapper">
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-shadow">
+                        <div class="card-img-container"></div>
+                        <div class="card-body">
+                          <h4 class="card-title"><a href="welcome.html"><img style="height:100px;" src="img/filipino.png" alt="Card image" class="logo"></a>
+                             <label id="welcomeName" style="font-size: 25px;"><b>FILIPINO</b></label></h4>                       
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <div class="row" id="main-menu">
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img  style="height:175px;" src="img/alpabeto.png" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Alpabeto</b></h4>
+                            <p class="card-text">Halina at mag-aral ng Alpabeto</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Addition');">Magsimula nang Matuto</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img style="height:175px; width:175px ;" src="img/pagbasa.png" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Pagbasa</b></h4>
+                            <p class="card-text">Halina at mag-aral ng Pagbasa</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Subtraction');">Magsimula nang Matuto</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img style="height:175px; width:175px ;" src="img/patinig.png" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Patinig</b></h4>
+                            <p class="card-text">Halina at mag-aral ng Patinig.</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Multiplication');">Magsimula nang Matuto</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img style="height:175px; width:185px ;" src="img/katinig.png" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Katinig</b></h4>
+                            <p class="card-text">Halina at mag-aral ng Katinig.</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Division');">Magsimula nang Matuto</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card card-shadow">
+                        <div class="card-img-container"> <img style= "height: 100px;" src="img/diptonggo.png" alt="Card image"></div>
+                        <div class="card-body">
+                          <h4 class="card-title"><b>Diptonggo</b></h4>
+                          <p class="card-text">Halina at mag-aral ng Diptonggo.</p>
+                          <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('CompNum');">Magsimula nang Matuto</a>
+                        </div>
+                    </div>
+                  </div>
+                <div class="col-sm-6">
+                  <div class="card card-shadow">
+                      <div class="card-img-container"><img style= "height: 100px;" src="img/klaster.png" alt="Card image"></div>
+                      <div class="card-body">
+                        <h4 class="card-title"><b>Klaster</b></h4>
+                        <p class="card-text">Halina at mag-aral ng Klaster.</p>
+                        <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('MultiplicationTabs');">Magsimula nang Matuto</a>
+                      </div>
+                  </div>
+              </div>
+              <div style="text-align:right;">
+                <a href="LearnCore_Homepage.html" class="btn btn-primary btn-lg" style="font-size: 18px;">Bumalik</a></div>
+              </div>
+              <div class="row" id="div-addition" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/alpabeto.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                            <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('LecMaterialsAdd');">Magsimula nang Matuto</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                                  <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('LecVideosAdd');">Magsimula nang Matuto</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:230px" style="width: 25px;" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                                   <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                                <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('FunQuizAdd');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 25px;" style ="font-size: 18px;" onclick="showDiv('Menu');">Bumalik</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div> 
+                    </div>
+
+              <div class="row" id="div-subtraction" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/pagbasa.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                            <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComSubration('LecMaterialsSub');">Magsimula nang Matuto</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                                  <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComSubration('LecVideosSub');">Magsimula nang Matuto</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:230px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                                   <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                                <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComSubration('FunQuizSub');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;"  onclick="showDiv('Menu');">Bumalik</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+             
+            <div class="row" id="div-multiplication" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/patinig.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                            <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('LecMaterialsMul');">Magsimula nang Matuto</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                                  <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('LecVideosMul');">Magsimula nang Matuto</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:230px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                                   <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                                <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('FunQuizMul');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Menu');">Bumalik</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+             
+            <div class="row" id="div-division" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/katinig.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                            <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComDivision('LecMaterialsDiv');">Magsimula nang Matuto</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                                  <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComDivision('LecVideosDiv');">Magsimula nang Matuto</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:230px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                                   <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                                <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComDivision('FunQuizDiv');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;"  onclick="showDiv('Menu');">Bumalik</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+             </div>
+          
+             <div class="row" id="div-compare" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/diptonggo.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b></b>Mga materyales sa pag-aaral</b></h4>
+                                                            <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman</p>
+                                                            <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('LecMaterialsCompare');">Magsimula nang Matuto</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                                  <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('LecVideosCompare');">Magsimula nang Matuto</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:230px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                                   <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                                <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('FunQuizCompare');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">Bumalik</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    </div>
+             
+          <div class="row" id="div-multip" style="display:none;">
+            <div class="col-sm-12">  
+                <div class="card card-shadow">                        
+                    <div class="card-body" id="background">
+                        <div class="row">
+                                <div class="card-img-container"><img  style="height:100px;" src="img/klaster.png" alt="Card image"></div>
+                                    <div class = "col-sm-4">
+                                        <div class="card card-shadow">
+                                            <div class="card-img-container"><img style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                        <p class="card-text">Masiyahan at Matuto sa tulong nitong mga Kaalaman</p>
+                                                        <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('LecMaterialsMultip');">Magsimula nang Matuto</a>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                    <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><b>Mga panoorin</b></h4>
+                                                              <p class="card-text">Pag-aral nang mas makulay gamit ang mga video!</p>
+                                                              <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('LecVideosMultip');">Magsimula nang Matuto</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                     <div class="card card-shadow">
+                                                         <div class="card-img-container"><img style="height:230px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                              <h4 class="card-title"><b>Pagsusulit</b></h4>
+                                                               <p class="card-text">Subukin ang iyong mga natutunan!</p>
+                                                            <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('FunQuizMultip');">Magsimula nang Matuto</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">Bumalik</a>
+                            </div>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+            <div class = "container1" id="Addition-Menu">
+            <div class="row" id="LectureAdd" style="display:none">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="lecture">
+                            <div class="row" >
+                               <div class="card-img-container"><img  style="height:120px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                               <div class = "col-sm-4">
+                                <div class="card card-shadow">
+                                        <div class="card-body">
+                                            <h4 class="card-title"><b>Mga materyales sa pag-aaral</b></h4>
+                                                <p class="card-text">Subukan ang iba pang worksheets na ito!</p>
+                                                <u>
+                                                    <h3><a href ="https://www.theteacherscraftph.link/2020/06/alpabeto-filipino.html" attributes-list download >Alpabetong Filipino</a></h3>
+                                                    <h3><a href ="https://aminoapps.com/c/language-exchange/page/blog/filipino-lesson-1-pronunciation-and-abakada/o3eW_n5jiduDmVmdoR8a2daP6kkj1YnLdWP" attributes-list download >Pronunciation and Abakada</a></h3>
+                                                    <h3><a href ="https://www.slideshare.net/adii_faye/ang-abakadang-filipino" attributes-list download >Ang Abakadang Filipino</a></h3>
+                                                    <h3><a href ="https://filipinotutorial.blogspot.com/2009/03/aralin-no-1.html" attributes-list download >Ang Abakada</a></h3>
+                                                </u>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="col-sm-8">
+                                        <div class="card card-shadow">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><b>Alpabeto</b></h4>
+                                                      <p class="card-text">Magsimula nang Matuto</p>
+                                                      <iframe width="700" height="500" src="https://www.youtube.com/embed/w1XAWCzjAKE"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComAddition('Menu1');">Bumalik</a> 
+                                        </div>
+                                   </div>
+                               </div>
+                               
+                          </div>
+                       </div>
+                    </div>
+                <div class="row" id="VideosAdd" style="display:none">
+                    <div class="col-sm-12">  
+                        <div class="card card-shadow">                        
+                            <div class="card-body" id="lecture">
+                                <div class="row" >
+                                   <div class="card-img-container"><img  style="height:100px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                        <div class="col-sm-12" >
+                                            <div class="card card-shadow">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Mga Video-Lektura para sa Alpabeto</b></h4>
+                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/vVxlXzZZGJ0"></iframe>
+                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/wE6kqJ_uy4M"></iframe>
+                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/3URnFIzRhJA"></iframe>
+                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/QCS9KaWsbt4"></iframe>
+                                                    
+                                                        </div>
+                                                       </div>
+                                                   </div>
+                                                   <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComAddition('Menu1');">Bumalik</a>  
+                                            </div>
+                                       </div>
+                                   </div>
+                              </div>
+                           </div>
+                        </div>
+                           <div class="row" id="QuizAdd" style="display:none">
+                            <div class="col-sm-12" id="hidden">  
+                                <div class="card card-shadow">                        
+                                    <div class="card-body" id="lecture">
+                                        <div class="row" >
+                                           <div class="card-img-container"><img  style="height:100px;" style="width: 100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                <div class="col-sm-12">
+                                                    <div class="card card-shadow">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Fun quiz for Alpabeto!</b></h4>
+                                                                <p style="font-size: 18px;">After learning about Alpabeto, try to answer this fun quiz using pen and paper!</p>
+                                                                <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                <iframe width="700" height="500" src="https://www.youtube.com/embed/I4v1S8E6kfY"></iframe>
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                            </div>
+                              <div class = "container1" id="Subtraction-Menu">
+                                <div class="row" id="LectureSub" style="display:none">
+                                    <div class="col-sm-12">  
+                                        <div class="card card-shadow">                        
+                                            <div class="card-body" id="lecture">
+                                                <div class="row" >
+                                                   <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                   <div class = "col-sm-4">
+                                                    <div class="card card-shadow">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                                <p class="card-text">Try this other worksheets: </p>
+                                                                    <u>
+                                                                        <h3><a href ="https://depedtambayan.org/gabay-sa-pagbabasa/" attributes-list download >Gabay sa Pagbabasa</a></h3>
+                                                                        <h3><a href ="https://fliphtml5.com/inwkw/hgkf/basic" attributes-list download >Pagbabasa</a></h3>
+                                                                        <h3><a href ="img/Panimulang Pagbasa sa Filipino.pdf" attributes-list download >Panimulang Pagbasa</a></h3>
+                                                                        <h3><a href ="img/Gabay sa Pagbabasa.docx" attributes-list download >Gabay sa Pagbabasa 2</a></h3>
+                                                                    </u>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="card card-shadow">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Lecture Material for Pagbasa</h4>
+                                                                          <p class="card-text">Start your learning</p>
+                                                                          <iframe width="700" height="500" src="https://www.youtube.com/embed/EpJRGUOEd_w"></iframe>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> 
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComSubration('Menu2');">Back</a></div>
+                                                       </div>
+                                                   </div>
+                                                   
+                                              </div>
+                                           </div>
+                                        </div>
+                                    <div class="row" id="VideosSub" style="display:none">
+                                        <div class="col-sm-12">  
+                                            <div class="card card-shadow">                        
+                                                <div class="card-body" id="lecture">
+                                                    <div class="row" >
+                                                       <div class="card-img-container"><img  style="height:100px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                            <div class="col-sm-12" >
+                                                                <div class="card card-shadow">
+                                                                        <div class="card-body">
+                                                                            <h4 class="card-title">Lecture videos for Pagbasa</h4>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/AAyYy6bmJw8"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/aEViLg13Rm0"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/h8kXUjWQXEk"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/SWhdR8eFLpQ"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComSubration('Menu2');">Back</a></div> 
+                                                                </div>
+                                                           </div>
+                                                       </div>
+                                                  </div>
+                                               </div>
+                                            
+                                               <div class="row" id="QuizSub" style="display:none">
+                                                <div class="col-sm-12">  
+                                                    <div class="card card-shadow">                        
+                                                        <div class="card-body" id="lecture">
+                                                            <div class="row" >
+                                                               <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="card card-shadow">
+                                                                                <div class="card-body">
+                                                                                    <h4 class="card-title">Fun quiz for Pagbasa</h4>
+                                                                                    <p style="font-size: 18px;">After learning about Pagbasa, try to answer this fun quiz using pen and paper!</p>
+                                                                                    <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                                    <iframe width="700" height="500" src="https://www.youtube.com/embed/G7n3b-0YmXw"></iframe>
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                            </div>   
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>  
+                                                <div class = "container1" id="Multiplication-Menu">
+                                                    <div class="row" id="LectureMul" style="display: none;">
+                                                        <div class="col-sm-12">  
+                                                            <div class="card card-shadow">                        
+                                                                <div class="card-body" id="lecture">
+                                                                    <div class="row" >
+                                                                       <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                       <div class = "col-sm-4">
+                                                                        <div class="card card-shadow">
+                                                                                <div class="card-body">
+                                                                                    <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                                                    <p class="card-text">Try this other worksheets: </p>
+                                                                                        <u>
+                                                                                            <h3><a href ="mhttps://www.teachandprint.com/2021/07/mga-patinig-vowels.html" attributes-list download >Mga Patinig</a></h3>
+                                                                                            <h3><a href ="https://www.abakada.ph/patinigworksheets" attributes-list download >Patinig worksheets</a></h3>
+                                                                                            <h3><a href ="https://aralinph.com/patinig/" attributes-list download >Patinig</a></h3>
+                                                                                            <h3><a href ="img/worksheet1.jpg" attributes-list download >Exercise 1</a></h3>
+                                                                                            <h3><a href ="img/worksheet2.jpg" attributes-list download >Exercise 2</a></h3>
+                                                                                        </u>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                            <div class="col-sm-8">
+                                                                                <div class="card card-shadow">
+                                                                                        <div class="card-body">
+                                                                                            <h4 class="card-title">Lecture Material for Patinig</h4>
+                                                                                            <p class="card-text">Start your learning</p>
+                                                                                            <iframe width="700" height="500" src="https://www.youtube.com/embed/LmaXG7AclPE"></iframe>
+                                                                                        </div>
+                                                                                    </div> 
+                                                                                </div>
+                                                                           </div>
+                                                                           <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultiplication('Menu3');">Back</a></div>
+                                                                       </div>
+                                                                  </div>
+                                                                     
+                                                               </div>
+                                                            </div>
+                                                        <div class="row" id="VideosMul" style="display: none;">
+                                                            <div class="col-sm-12">  
+                                                                <div class="card card-shadow">                        
+                                                                    <div class="card-body" id="lecture">
+                                                                        <div class="row" >
+                                                                           <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                <div class="col-sm-12" >
+                                                                                    <div class="card card-shadow">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title">Lecture Videos for Patinig</h4>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/jmjyoyV0GxQ"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/aEViLg13Rm0"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/6Wny7pXktBs"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/gNFjokR7u4A"></iframe>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultiplication('Menu3');">Back</a></div> 
+                                                                                    </div>
+                                                                               </div>
+                                                                           </div>
+                                                                      </div>
+                                                                   </div>
+                                                                </div>
+                                                                <div class="row" id="QuizMul" style="display:none">
+                                                                    <div class="col-sm-12">  
+                                                                        <div class="card card-shadow">                        
+                                                                            <div class="card-body" id="lecture">
+                                                                                <div class="row" >
+                                                                                   <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                        <div class="col-sm-12">
+                                                                                            <div class="card card-shadow">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title">Fun quiz for Patinig</h4>
+                                                                                                        <p style="font-size: 18px;">After learning about Patinig, try to answer this fun quiz using pen and paper!</p>
+                                                                                                        <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                                                        <iframe width="700" height="500" src="https://www.youtube.com/embed/jwauuUShS6k"></iframe>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>  
+                                                                                             <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                            </div>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                    <div class = "container1" id="Division-Menu">
+                                                                        <div class="row" id="LectureDiv" style="display: none;">
+                                                                            <div class="col-sm-12">  
+                                                                                <div class="card card-shadow">                        
+                                                                                    <div class="card-body" id="lecture">
+                                                                                        <div class="row" >
+                                                                                           <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                                           <div class = "col-sm-4">
+                                                                                            <div class="card card-shadow">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title">Lecture Materials</h4>
+                                                                                                        <p class="card-text">Try this other worksheets: </p>
+                                                                                                        <u>
+                                                                                                            <h3><a href ="http://homeworks-edsci.blogspot.com/2012/07/katinig-na-g-may-larawan.html" attributes-list download >Katinig na may Larawan</a></h3>
+                                                                                                            <h3><a href ="img/Mga Katinig.docx" attributes-list download >Mga Katinig</a></h3>
+                                                                                                            <h3><a href ="img/HuntersWoodsPH_Filipino_Katinig.pdf" attributes-list download >Worksheet</a></h3>
+                                                                                                        </u>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="card card-shadow">
+                                                                                                            <div class="card-body">
+                                                                                                                <h4 class="card-title">Lecture Material for Katinig</h4>
+                                                                                                                  <p class="card-text">Start your learning</p>
+                                                                                                                  <iframe width="700" height="500" src="https://www.youtube.com/embed/x-terue4y4Y"></iframe>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div> 
+                                                                                                    </div>
+                                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a>
+                                                                                                    </div>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                      </div>
+                                                                                   </div>
+                                                                                </div>
+                                                                                <div class="row" id="VideosDiv" style="display: none;">
+                                                                                    <div class="col-sm-12">  
+                                                                                        <div class="card card-shadow">                        
+                                                                                            <div class="card-body" id="lecture">
+                                                                                                <div class="row" >
+                                                                                                   <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                                        <div class="col-sm-12" >
+                                                                                                            <div class="card card-shadow">
+                                                                                                                    <div class="card-body">
+                                                                                                                        <h4 class="card-title">Lecture Videos for Katinig</h4>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/o2gzE9qcWp8"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/eh-lhsUbeso"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/qAhgwwWTv20"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/QWNYMrHK62s"></iframe>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                
+                                                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComDivision('Menu4');">Back</a></div> 
+                                                                                                            </div>
+                                                                                                       </div>
+                                                                                                   </div>
+                                                                                              </div>
+                                                                                           </div>
+                                                                                        
+                                                                                        <div class="row" id="QuizDiv" style="display:none">
+                                                                                            <div class="col-sm-12">  
+                                                                                                <div class="card card-shadow">                        
+                                                                                                    <div class="card-body" id="lecture">
+                                                                                                        <div class="row" >
+                                                                                                           <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                                                <div class="col-sm-12">
+                                                                                                                    <div class="card card-shadow">
+                                                                                                                            <div class="card-body">
+                                                                                                                                <h4 class="card-title">Fun quiz for Katinig</h4>
+                                                                                                                                <p style="font-size: 18px;">After learning about Katinig, try to answer this fun quiz using pen and paper!</p>
+                                                                                                                            <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                                                                                <iframe width="700" height="500" src="https://www.youtube.com/embed/xBipS-N-RQY"></iframe>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>  
+                                                                                                                        <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                                                    </div>
+                                                                                                               </div>
+                                                                                                           </div>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    </div>
+
+                                                    <div class = "container1" id="Compare-Menu">
+                                                        <div class="row" id="LectureCompare" style="display: none;">
+                                                            <div class="col-sm-12">  
+                                                                <div class="card card-shadow">                        
+                                                                    <div class="card-body" id="lecture">
+                                                                        <div class="row" >
+                                                                           <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                           <div class = "col-sm-4">
+                                                                            <div class="card card-shadow">
+                                                                                    <div class="card-body">
+                                                                                        <h4 class="card-title">Lecture Materials</h4>
+                                                                                            <p class="card-text">For other information check this link:</p>
+                                                                                            <u>
+                                                                                                <h3><a href ="https://samutsamot.files.wordpress.com/2014/09/diptonggo.pdf" attributes-list download >Diptonggo</a></h3>
+                                                                                                <h3><a href ="https://pdfslide.tips/documents/aralin-sa-filipino-sa-filipino-diptonggo-ang-patinig-ay-alin-man-sa-limang-titik.html?page=1" attributes-list download >Aralin sa Filipino: Diptonggo</a></h3>
+                                                                                                <h3><a href ="https://drive.google.com/file/d/1_lhYHuYjbugQDeq9UytVQv8w5-hbNiW-/view" attributes-list download >Ano ang Diptonggo</a></h3>
+                                                                                            </u>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                                <div class="col-sm-8">
+                                                                                    <div class="card card-shadow">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title">Diptonggo</h4>
+                                                                                                  <p class="card-text">Start your learning</p>
+                                                                                                  <iframe width="700" height="500" src="https://www.youtube.com/embed/7Jx2aL8yw2g"></iframe>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('Menu5');">Back</a>
+                                                                                    </div>
+                                                                               </div>
+                                                                           </div>
+                                                                           
+                                                                      </div>
+                                                                   </div>
+                                                                </div>
+                                                            <div class="row" id="VideosCompare" style="display: none;">
+                                                                <div class="col-sm-12">  
+                                                                    <div class="card card-shadow">                        
+                                                                        <div class="card-body" id="lecture">
+                                                                            <div class="row" >
+                                                                               <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                               <div class = "col-sm-12">
+                                                                                <div class="card card-shadow">
+                                                                                        <div class="card-body">
+                                                                                            <h4 class="card-title">Lecture Videos for Diptonggo</h4>
+                                                                                                
+                                                                                                <u>
+                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/mL4ZCMuKy_Y"></iframe>
+                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/nxqK1zNyKOY"></iframe>
+                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/bWh9U09neHs"></iframe>
+                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/N1kowknoQqI"></iframe>
+                                                                                                </u>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                    
+                                                                                            
+                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('Menu5');">Back</a>
+                                                                                </div>
+                                                                                   </div>
+                                                                               </div>
+                                                                          </div>
+                                                                       </div>
+                                                                    </div>
+                                                                       <div class="row" id="QuizCompare" style="display: none;">
+                                                                        <div class="col-sm-12">  
+                                                                            <div class="card card-shadow">                        
+                                                                                <div class="card-body" id="lecture">
+                                                                                    <div class="row" >
+                                                                                       <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                       <div class = "col-sm-12">
+                                                                                        <div class="card card-shadow">
+                                                                                                <div class="card-body">
+                                                                                                    <h4 class="card-title">Fun Quiz for Diptonggo</h4>
+                                                                                                    <p style="font-size: 18px;">After learning about Diptonggo try to answer this fun quiz using pen and paper!</p>
+                                                                                                    <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                                                        <iframe width="700" height="500" src="https://www.youtube.com/embed/1z3Gs7l42TA"></iframe>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                          </div>
+                                                       <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                    </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                       </div>
+                                    </div>
+                                    <div class = "container1" id="Division-Menu">
+                                        <div class="row" id="LectureMultip" style="display: none;">
+                                            <div class="col-sm-12">  
+                                                <div class="card card-shadow">                        
+                                                    <div class="card-body" id="lecture">
+                                                        <div class="row" >
+                                                           <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                           <div class = "col-sm-4">
+                                                            <div class="card card-shadow">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Lecture Materials</h4>
+                                                                            <p class="card-text">For other information check this link:</p>
+                                                                            <u>
+                                                                                <h3><a href ="https://www.liveworksheets.com/nz1263257mv" attributes-list download >Klaster Practice</a></h3>
+                                                                                <h3><a href ="https://www.scribd.com/document/469883056/Filipino-3-Q-4-JFD-Salitang-May-Klaster-Teacher-Made-Learner-s-Home-Task" attributes-list download >Salitang Klaster/a></h3>
+                                                                                <h3><a href ="https://samutsamot.com/tag/kambal-katinig-worksheets/" attributes-list download>Kambal-Katinig</a></h3>
+                                                                            </u>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                                <div class="col-sm-8">
+                                                                    <div class="card card-shadow">
+                                                                            <div class="card-body">
+                                                                                <h4 class="card-title">Klaster</h4>
+                                                                                  <p class="card-text">Start your learning</p>
+                                                                                  <iframe width="700" height="500" src="https://www.youtube.com/embed/rLXf-7GZous"></iframe>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> 
+                                                                        
+                                                                     
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('Menu6');">Back</a>
+                                                                    </div>
+                                                               </div>
+                                                           </div>
+                                                           
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                            <div class="row" id="VideosMultip" style="display: none;">
+                                                <div class="col-sm-12">  
+                                                    <div class="card card-shadow">                        
+                                                        <div class="card-body" id="lecture">
+                                                            <div class="row" >
+                                                               <div class="card-img-container"><img  style="height:100px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                               <div class = "col-sm-12">
+                                                                <div class="card card-shadow">
+                                                                        <div class="card-body">
+                                                                            <h4 class="card-title">Lecture Videos for Klaster</h4>
+                                                                                
+                                                                                <u>
+                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/J2KeewOCVH0"></iframe>
+                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/0RrMx31AsVQ"></iframe>
+                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/Vi_AyWUEZFE"></iframe>
+                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/fzQTHeOY93c"></iframe>
+                                                                                </u>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                             
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('Menu6');">Back</a>
+                                                                </div>
+                                                                   </div>
+                                                               </div>
+                                                          </div>
+                                                       </div>
+                                                    </div>
+                                                       <div class="row" id="QuizMultip" style="display: none;">
+                                                        <div class="col-sm-12">  
+                                                            <div class="card card-shadow">                        
+                                                                <div class="card-body" id="lecture">
+                                                                    <div class="row" >
+                                                                       <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                       <div class = "col-sm-12">
+                                                                        <div class="card card-shadow">
+                                                                                <div class="card-body">
+                                                                                    <h4 class="card-title">Fun Quiz</h4>
+                                                                                    <p style="font-size: 18px;">After learning about Klaster, try to answer this fun quiz using paper and pen!</p>
+                                                                                    <p style="font-size: 18px;">After answering the questions, ask the teachers or parent to check your answers.</p>
+                                                                                    <iframe width="700" height="500" src="https://www.youtube.com/embed/1z3Gs7l42TA"></iframe>
+                                                                                        
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                       
+                                              </div>   
+                                          </div>
+                                       <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                    </div>
+                                 </div>
+                             </div>
+                         </div>
+                       </div>
+                       </div>
+                </div>
+           </div>
+                    
+
+               
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title" id="modalTitle">Hi!</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                Are you sure you want to proceed?
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >No</button>
+            </div>    
+        </div>
+      </div> 
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="Modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title" id="modalTitle">Hi!</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                Congratulations for finishing this course!
+            </div>
+
+        </div>
+      </div> 
+    </div>
+
+  </div>
+
+  </body>
+</html>

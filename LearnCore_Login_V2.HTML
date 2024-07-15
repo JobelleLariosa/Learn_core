@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="image/png" href="./images/logo.jpg">
+    <!--used to import google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <title>Learn_Core</title>
+    <link rel="website icon" type="png" href="img/LearnCore3.png" id="logo1" style="border-radius: 100%;">
+</head>
+<style>
+    body {
+        background-image: url('./img/backgroundlearn_core.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Rokkitt', serif;
+    }
+    #logo1 {
+        border-radius: 100%;
+    }
+    .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .logo img {
+        height: 100px;
+        width: 100px;
+    }
+    .welcome-container h1 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .login-page {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .txt-field {
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .txt-field h4 {
+        margin-bottom: 5px;
+        color: #333;
+    }
+    .txt-field input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .toggle-password {
+        position: absolute;
+        top: 70%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+    }
+    .login-page button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .login-page button:hover {
+        background-color: #45a049;
+    }
+    .sign-up {
+        margin-top: 20px;
+        color: white;
+    }
+    .sign-up a {
+        color: white;
+        text-decoration: none;
+    }
+    .sign-up a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="icon">
+        <div class="logo">
+            <center><img src="./img/LearnCore3.png" id="logo1"></center>
+        </div> 
+        <div class="welcome-container">
+            <h1 class="welcome">Welcome to LearnCore</h1>
+        </div>
+        <div class="login-page">
+            <form action="login.php" method="post">
+                <div class="txt-field">
+                    <h4 id="username">Username</h4>
+                    <input type="text" name="username" placeholder="Enter Username" required> 
+                </div>
+                <div class="txt-field">
+                    <h4 id="password">Password</h4>
+                    <input type="password" name="password" placeholder="Enter Password" id="password-field" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+                </div>
+                <button type="submit">Log In</button>
+            </form> 
+        </div>
+        <div class="sign-up">
+            Forgot password? <a href="request_reset.html">Click here</a>
+        </div>
+        <div class="sign-up">
+            Don't have an account? <a href="sample.html">Sign Up</a>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password-field');
+            const toggleIcon = passwordField.nextElementSibling;
+
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.textContent = '🙈'; // Change icon to indicate the text is visible
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.textContent = '👁️'; // Change icon back to indicate the text is hidden
+            }
+        }
+    </script>
+</body>
+</html>

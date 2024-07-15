@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="website icon" type="png" href="img/LearnCore3.png" id="logo1" style="border-radius: 100%;">
+    <title>Addition</title>
+    
+    <style>
+        body {
+            background-image: url('img/backgroundlearn_core.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Kanit', sans-serif;
+        }
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #logo1 {
+            border-radius: 100%;
+        }
+        .create-account {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-page, .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .signup-page h4, .container label {
+            margin: 10px 0 5px;
+        }
+        .signup-page input, .container input, .container select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .signup-page button, .container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+        }
+        .signup-page button:hover, .container .btn:hover {
+            background-color: #45a049;
+        }
+        .log-in {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .log-in a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 20px;
+    
+        }
+
+        .log-in a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .back-button {
+            background-color: #d9534f;
+        }
+        .back-button:hover {
+            background-color: #c9302c;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Retrieve user inputs
+            const answers = [
+                document.querySelector('input[name="number1"]').value.trim(),
+                document.querySelector('input[name="number2"]').value.trim(),
+                document.querySelector('input[name="number3"]').value.trim(),
+                document.querySelector('input[name="number4"]').value.trim(),
+                document.querySelector('input[name="number5"]').value.trim()
+            ];
+
+            // Define correct answers
+            const correctAnswers = ['4', '7', '14', '15', '17'];
+
+            // Check answers and provide feedback
+            let correct = true;
+            let wrongIndexes = [];
+            answers.forEach((answer, index) => {
+                if (answer !== correctAnswers[index]) {
+                    correct = false;
+                    wrongIndexes.push(index);
+                }
+            });
+
+            if (correct) {
+                alert('All answers are correct!');
+                form.submit(); // Submit the form
+            } else {
+                let message = 'Some answers are incorrect. Correct answers are:\n';
+                wrongIndexes.forEach((index) => {
+                    message += `Question ${index + 1}: ${correctAnswers[index]}\n`;
+                });
+                alert(message);
+            }
+        });
+    });
+</script>
+
+</head>
+<body>
+
+<div class="logo">
+    <img src="img/LearnCore3.png" style="height: 100px; width: 100px;" id="logo1">
+</div>
+
+<div class="container">
+    <h2>TEST YOUR LEARNING IN ADDING 2 SINGLE NUMBERS:</h2>
+    <form id="quizForm">
+        <label for="number1">2 + 2</label>
+        <input type="text" id="number1" name="number1" required>
+
+        <label for="number2">4 + 3</label>
+        <input type="text" id="number2" name="number2" required>
+
+        <label for="number3">5 + 9</label>
+        <input type="text" id="number3" name="number3" required>
+
+        <label for="number4">8 + 7</label>
+        <input type="text" id="number4" name="number4" required>
+
+        <label for="number5">8 + 9</label>
+        <input type="text" id="number5" name="number5" required>
+
+        <div class="button-container">
+            <button type="button" onclick="checkAnswers()">Submit</button>
+            <button type="button" class="back-button" onclick="window.location.href='http://localhost/LearnCore_V2/mathematics.html#'">Back</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function checkAnswers() {
+        const form = document.forms['quizForm'];
+        const answers = [
+            form['number1'].value.trim(),
+            form['number2'].value.trim(),
+            form['number3'].value.trim(),
+            form['number4'].value.trim(),
+            form['number5'].value.trim()
+        ];
+
+        const correctAnswers = ['4', '7', '14', '15', '17'];
+
+        let correct = true;
+        let wrongIndexes = [];
+
+        answers.forEach((answer, index) => {
+            if (answer !== correctAnswers[index]) {
+                correct = false;
+                wrongIndexes.push(index + 1);
+            }
+        });
+
+        if (correct) {
+            alert('All answers are correct!');
+            form.submit(); // Submit the form
+        } else {
+            let message = 'Some answers are incorrect. Correct answers are:\n';
+            wrongIndexes.forEach(index => {
+                message += `Question ${index}: ${correctAnswers[index - 1]}\n`;
+            });
+            alert(message);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mathematics</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+     <!-- google font cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+
+    <!-- import jqueryy and bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    
+    <link rel="website icon" type="png" href="img/LearnCore3.png" id="logo1" style="border-radius: 100%;">
+
+    <style>
+        .Maincontainer {
+            background-image: url(img/backgroundlearn_core.png);
+            min-height: 100vh;
+            justify-items: center;
+        }
+
+        :root {
+            --gradient: linear-gradient(90deg, #806905dc, #d4902a);
+        }
+
+        * {
+            font-family: 'Rokkitt', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all linear;
+        }
+
+        *::selection {
+            background: #ebb70c;
+            color: #fff12cec;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        html::-webkit-scrollbar {
+            width: 1.5rem;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #ebcf32d7;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: linear-gradient(#ffd382e7, #e6b531);
+        }
+
+        .wrapper {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .selection-img {
+            width: 50%;
+        }
+
+        .selection-img2 {
+            width: 100%;
+        }
+
+        .card-img-container {
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 100%;
+        }
+
+        .card-shadow {
+            box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 2rem;
+        }
+
+        .row {
+            padding-bottom: 20px;
+            row-gap: 20px;
+        }
+
+        .card-text {
+            text-align: left;
+            font-size: 17px;
+        }
+
+        .card-title {
+            text-align: left;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .logo {
+            border-radius: 100%;
+        }
+
+        .Subjects {
+            font-size: 10px;
+            color: black;
+            border-radius: 100%;
+        }
+
+        .image {
+            border-radius: 30%;
+        }
+
+        .card-img-container {
+            border-radius: 100%;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 1.5rem 7%;
+            background-image: url(img/backgroundlearn_core.png);
+            box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .4);
+        }
+
+        header .Subjects {
+            border-radius: 100%;
+        }
+
+        header .Subjects ul {
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            list-style: none;
+            font-size: 20px;
+        }
+
+        header .Subjects ul li {
+            margin: 0 1rem;
+        }
+
+        header .Subjects ul li a {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        header .Subjects ul li a:hover {
+            color: #0c22eb;
+        }
+
+        header #Help {
+            font-size: 3rem;
+            color: #ffff;
+            cursor: pointer;
+        }
+
+        header #login:hover {
+            color: #0c22eb;
+        }
+
+        .log_in {
+            font-size: 15px;
+        }
+
+        header #menu {
+            font-size: 3rem;
+            color: #ffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        header #mathing {
+            font-size: 25px;
+            color: aliceblue;
+            justify-content: left;
+        }
+
+        .card-img-top-selection-img {
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 100%;
+        }
+
+        body {
+            -webkit-text-size-adjust: 50%;
+            background-image: url(img/backgroundpic.webp);
+        }
+
+        .quiz-container {
+            background: aliceblue;
+            box-shadow: 0 0 20px 2px rgb(100, 100, 100, 1.5rem);
+            width: 450px;
+        }
+
+        .quiz-header {
+            padding: 4rem;
+        }
+
+        h2 {
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+            font-size: 35px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 28px;
+            margin: 1rem;
+        }
+
+        ul li label {
+            cursor: pointer;
+        }
+
+        button {
+            background: #0c22eb;
+            color: #ffff;
+            border: none;
+            display: block;
+            width: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            padding: 1.1rem;
+        }
+
+       .card-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .image-materials {
+            height: 215px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            font-size: 18px;
+        }
+
+    </style>
+
+<script>
+
+        $(document).ready(function(Addname){
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-factorial').hide()
+            $('#div-Pemdas').hide();
+    });
+
+    function Addname(){
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get('name');
+
+        if (name !== null) {
+            document.getElementById('welcomeName').innerHTML = "Welcome " + name + "! Please select a topic to learn.";
+            document.getElementById('modalTitle').innerHTML = "Hi " + name + "!";
+        }
+    }
+    
+
+    function showDiv(name){
+        if (name=="Addition"){
+            $('#div-addition').slideToggle(1500);
+            $('#main-menu').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Subtraction"){
+            $('#div-subtraction').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Multiplication"){
+            $('#div-multiplication').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="Division"){
+            $('#div-division').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide();
+        }
+
+        if (name=="CompNum"){
+            $('#div-compare').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-multip').hide();
+            $('#div-division').hide();
+        }
+
+        if (name=="MultiplicationTabs"){
+            $('#div-multip').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#main-menu').hide();
+            $('#div-multiplication').hide();
+            $('#div-compare').hide();
+            $('#div-division').hide();
+        }
+
+        if (name=="Menu"){
+            $('#main-menu').slideToggle(1500);
+            $('#div-addition').hide();
+            $('#div-subtraction').hide();
+            $('#div-multiplication').hide();
+            $('#div-division').hide();
+            $('#div-compare').hide()
+            $('#div-multip').hide(); 
+            $('#LectureAdd').hide();
+            $('#VideosAdd').hide();
+            $('#QuizAdd').hide();
+            $('#LectureSub').hide();
+            $('#QuizSub').hide();
+            $('#VideosSub').hide();
+            $('#LectureMul').hide();
+            $('#QuizMul').hide();
+            $('#VideosMul').hide();
+            $('#LectureDiv').hide();
+            $('#VideosDiv').hide();
+            $('#QuizDiv').hide();
+            $('#LectureCompare').hide();
+            $('#VideosCompare').hide();
+            $('#QuizCompare').hide();
+            $('#QuizMultip').hide();
+            $('#LectureMultip').hide();
+            $('#VideosMultip').hide();
+
+        }
+    }
+
+        function LectureComAddition(name){
+
+            if (name == "LecMaterialsAdd"){
+                $('#LectureAdd').slideToggle(1500);
+                $('#VideosAdd').hide();
+                $('#QuizAdd').hide();
+                $('#div-addition').hide();
+                $('#main-menu').hide();
+            }
+            if (name == "LecVideosAdd"){
+                $('#VideosAdd').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#QuizAdd').hide();
+                $('#div-addition').hide();
+            }
+
+            if (name == "FunQuizAdd"){
+                $('#QuizAdd').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#VideosAdd').hide();
+                $('#div-addition').hide();
+            }
+
+            if(name == "Menu1"){
+                $('#div-addition').slideToggle(1500);
+                $('#LectureAdd').hide();
+                $('#VideosAdd').hide();
+                $('#QuizAdd').hide();
+                $('#hidden').hide();
+
+            }
+
+
+    }
+
+            function LectureComSubration(name){
+            if (name == "LecMaterialsSub"){
+                $('#LectureSub').slideToggle(1500);
+                $('#VideosSub').hide();
+                $('#QuizSub').hide();
+                $('#div-subtraction').hide();
+
+            }
+
+            if (name == "LecVideosSub"){
+                $('#VideosSub').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#QuizSub').hide();
+                $('#div-subtraction').hide();
+            }
+
+            if (name == "FunQuizSub"){
+                $('#QuizSub').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#VideosSub').hide();
+                $('#div-subtraction').hide();
+            }
+
+            if(name == "Menu2"){
+                $('#div-subtraction').slideToggle(1500);
+                $('#LectureSub').hide();
+                $('#VideosSub').hide();
+                $('#QuizSub').hide();
+                $('#hidden').hide();
+
+            }
+            }
+
+        function LectureComMultiplication(name){
+
+            if (name == "LecMaterialsMul"){
+                $('#LectureMul').slideToggle(1500);
+                $('#VideosMul').hide();
+                $('#QuizSubMul').hide();
+                $('#div-multiplication').hide();
+
+            }
+
+            if (name == "LecVideosMul"){
+                $('#VideosMul').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#QuizMul').hide();
+                $('#div-multiplication').hide();
+            }
+
+            if (name == "FunQuizMul"){
+                $('#QuizMul').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#VideosMul').hide();
+                $('#div-multiplication').hide();
+            }
+
+            if(name == "Menu3"){
+                $('#div-multiplication').slideToggle(1500);
+                $('#LectureMul').hide();
+                $('#VideosMul').hide();
+                $('#QuizMul').hide();
+                $('#hidden').hide();
+            }
+        }
+
+        function LectureComDivision(name){
+            if (name == "LecMaterialsDiv"){
+                $('#LectureDiv').slideToggle(1500);
+                $('#VideosDiv').hide();
+                $('#QuizDiv').hide();
+                $('#div-division').hide();
+
+            }
+
+            if (name == "LecVideosDiv"){
+                $('#VideosDiv').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#QuizDiv').hide();
+                $('#div-division').hide();
+            }
+
+            if (name == "FunQuizDiv"){
+                $('#QuizDiv').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#VideosDiv').hide();
+                $('#div-division').hide();
+
+            }
+
+            if(name == "Menu4"){
+                $('#div-division').slideToggle(1500);
+                $('#LectureDiv').hide();
+                $('#VideosDiv').hide();
+                $('#QuizDiv').hide();
+                $('#hidden').hide();
+            }
+        }
+
+        function LectureComCompare(name){
+            if (name == "LecMaterialsCompare"){
+                $('#LectureCompare').slideToggle(1500);
+                $('#VideosCompare').hide();
+                $('#QuizCompare').hide();
+                $('#div-compare').hide();
+            }
+
+            if (name == "LecVideosCompare"){
+                $('#VideosCompare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#QuizCompare').hide();
+                $('#div-compare').hide();
+            }
+
+            if (name == "FunQuizCompare"){
+                $('#QuizCompare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#VideosCompare').hide();
+                $('#div-compare').hide();
+            }
+
+            if(name == "Menu5"){
+                $('#div-compare').slideToggle(1500);
+                $('#LectureCompare').hide();
+                $('#VideosCompare').hide();
+                $('#QuizCompare').hide();
+                $('#hidden').hide();
+            }
+        }
+
+        function LectureComMultip(name){
+            if (name == "LecMaterialsMultip"){
+                $('#LectureMultip').slideToggle(1500);
+                $('#VideosMultip').hide();
+                $('#QuizMultip').hide();
+                $('#div-multip').hide();
+
+            }
+
+            if (name == "LecVideosMultip"){
+                $('#VideosMultip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#QuizMultip').hide();
+                $('#div-multip').hide();
+            }
+
+            if (name == "FunQuizMultip"){
+                $('#QuizMultip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#VideosMultip').hide();
+                $('#div-multip').hide();
+            }
+
+            if(name == "Menu6"){
+                $('#div-multip').slideToggle(1500);
+                $('#LectureMultip').hide();
+                $('#VideosMultip').hide();
+                $('#QuizMultip').hide();
+                $('#hidden').hide();
+            }
+        }
+
+</script>
+
+   </head>
+   <body onload="Addname()">
+     <!---Header starts-->
+     <div class = "Maincontainer">
+        <header>
+  
+         <a><img src="img/LearnCore3.png" width="100" height ="100" class = "logo"></a>
+          <nav class = "Subjects">
+        
+            <ul>
+                <li><a href="LearnCore_Homepage.html">Home</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="LearnCore_Login_V2.HTML">Sign Out</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+        <div class="mainContainer">
+            <div class="container wrapper">
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-shadow">
+                        <div class="card-img-container"></div>
+                        <div class="card-body">
+                          <h4 class="card-title"><a href="welcome.html"><img style="height:100px;" src="img/math1.jpg" alt="Card image" class="logo"></a>
+                             <label id="welcomeName" style="font-size: 25px;"><b>MATHEMATICS</b></label></h4>                       
+                        </div>
+                    </div>
+                </div>
+              </div>
+                <div class="row" id="main-menu">
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img  class="card-img-top selection-img" src="img/Addition1.jpg" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Addition</b></h4>
+                            <p class="card-text">Enjoy Learning Addition.</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Addition');">Start Learning</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img class="card-img-top selection-img" src="img/subtraction1.jpg" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Subtraction</b></h4>
+                            <p class="card-text">Enjoy Learning Subtraction</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Subtraction');">Start Learning</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img class="card-img-top selection-img" src="img/multipllication.png" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Multiplication</b></h4>
+                            <p class="card-text">Enjoy Learning Multiplication.</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Multiplication');">Start Learning</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="card card-shadow">
+                          <div class="card-img-container"><img class="card-img-top selection-img" src="img/division.webp" alt="Card image"></div>
+                          <div class="card-body">
+                            <h4 class="card-title"><b>Division</b></h4>
+                            <p class="card-text">Enjoy Learning Division.</p>
+                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Division');">Start Learning</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="card card-shadow">
+                        <div class="card-img-container"> <img style= "height: 100px;" src="img/comparenum.jpeg" alt="Card image"></div>
+                        <div class="card-body">
+                          <h4 class="card-title"><b>Comparing numbers</b></h4>
+                          <p class="card-text">Enjoy Learning Comparing numbers</p>
+                          <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('CompNum');">Start Learning</a>
+                        </div>
+                    </div>
+                  </div>
+                <div class="col-sm-6">
+                  <div class="card card-shadow">
+                      <div class="card-img-container"><img style= "height: 100px;" src="img/multip.jpeg" alt="Card image"></div>
+                      <div class="card-body">
+                        <h4 class="card-title"><b>Multiplication Table</b></h4>
+                        <p class="card-text">Enjoy Learning Multiplication Table.</p>
+                        <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('MultiplicationTabs');">Start Learning</a>
+                      </div>
+                  </div>
+              </div>
+
+              <div style="text-align:right;">
+                <a href="LearnCore_Homepage.html" class="btn btn-primary btn-lg" style="font-size: 18px;">Back</a></div>
+            
+              </div>
+              <div class="row" id="div-addition" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/Addition1.jpg" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container">
+                                                    <img src="img/LearningMaterials.png" alt="Card image" style="height: 230px; width: 220px;">
+                                                </div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                            <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('LecMaterialsAdd');">Start Learning</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:255px; width: 270px;" src="https://miro.medium.com/v2/resize:fit:1025/1*37s0vlgwz_O0m0jAwDDl6g.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Practice your Learning</b></h4>
+                                                                  <p class="card-text">Test your learning</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('LecVideosAdd');">Start Learning</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:250px" style="width: 25px;" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                                   <p class="card-text">Test your learnings</p>
+                                                                <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComAddition('FunQuizAdd');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                             <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a></div>
+                                   </div>                          
+                              </div>
+                        </div> 
+                    </div>
+
+              <div class="row" id="div-subtraction" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/Addition1.jpg" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container">
+                                                    <img src="img/LearningMaterials.png" alt="Card image" style="height: 230px; width: 220px;"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                            <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComSubration('LecMaterialsSub');">Start Learning</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:255px; width: 270px;" src="https://miro.medium.com/v2/resize:fit:1025/1*37s0vlgwz_O0m0jAwDDl6g.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Practice your Learning</b></h4>
+                                                                  <p class="card-text">Test your learning</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComSubration('LecVideosSub');">Start Learning</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:250px" style="width: 25px;" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                                   <p class="card-text">Test your learnings</p>
+                                                                <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComSubration('FunQuizSub');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                             <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a></div>
+                                   </div>                          
+                              </div>
+                        </div> 
+             </div>
+            <div class="row" id="div-multiplication" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/multipllication.png" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                            <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('LecMaterialsMul');">Start Learning</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Lecture Video</b></h4>
+                                                                  <p class="card-text">Spice your collected learning with the help of these Videos.</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('LecVideosMul');">Start Learning</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:255px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                                   <p class="card-text">Test your learnings</p>
+                                                                <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComMultiplication('FunQuizMul');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+             
+            <div class="row" id="div-division" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/division.webp" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                            <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComDivision('LecMaterialsDiv');">Start Learning</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Lecture Video</b></h4>
+                                                                  <p class="card-text">Spice your collected learning with the help of these Videos.</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg" style ="font-size: 18px;" onclick="LectureComDivision('LecVideosDiv');">Start Learning</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:255px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                                   <p class="card-text">Test your learnings</p>
+                                                                <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComDivision('FunQuizDiv');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;"  onclick="showDiv('Menu');">Back</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+             </div>
+          
+             <div class="row" id="div-compare" style="display:none;">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="background">
+                            <div class="row">
+                                    <div class="card-img-container"><img  style="height:100px;" src="img/comparenum.jpeg" alt="Card image"></div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                <div class="card-img-container"><img  style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b></b>Lecture Materials</b></h4>
+                                                            <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                            <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('LecMaterialsCompare');">Start Learning</a>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="col-sm-4">
+                                                    <div class="card card-shadow">
+                                                        <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Lecture Video</b></h4>
+                                                                  <p class="card-text">Spice your collected learning with the help of these Videos.</p>
+                                                                  <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('LecVideosCompare');">Start Learning</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                         <div class="card card-shadow">
+                                                             <div class="card-img-container"><img style="height:255px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                                <div class="card-body">
+                                                                  <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                                   <p class="card-text">Test your learnings</p>
+                                                                <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('FunQuizCompare');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                    
+                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    </div>
+             
+          <div class="row" id="div-multip" style="display:none;">
+            <div class="col-sm-12">  
+                <div class="card card-shadow">                        
+                    <div class="card-body" id="background">
+                        <div class="row">
+                                <div class="card-img-container"><img  style="height:100px;" src="img/multip.jpeg" alt="Card image"></div>
+                                    <div class = "col-sm-4">
+                                        <div class="card card-shadow">
+                                            <div class="card-img-container"><img style="height: 230px;" src="img/LearningMaterials.png" alt="Card image"></div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                        <p class="card-text">Enjoy Learning with the help of this Fun Collection of Knowledges.</p>
+                                                        <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('LecMaterialsMultip');">Start Learning</a>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                    <div class="card-img-container"><img style="height:230px" src="img/video.png" alt="Card image"></div>
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><b>Lecture Video</b></h4>
+                                                              <p class="card-text">Spice your collected learning to the help of these Videos.</p>
+                                                              <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('LecVideosMultip');">Start Learning</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                     <div class="card card-shadow">
+                                                         <div class="card-img-container"><img style="height:255px" src="img/LearningMaterials1.jpg" alt="Card image"></div>
+                                                            <div class="card-body">
+                                                              <h4 class="card-title"><b>Fun Quiz</b></h4>
+                                                               <p class="card-text">Test your learnings</p>
+                                                            <a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('FunQuizMultip');">Start Learning</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">Back</a>
+                            </div>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+            <div class = "container1" id="Addition-Menu">
+            <div class="row" id="LectureAdd" style="display:none">
+                <div class="col-sm-12">  
+                    <div class="card card-shadow">                        
+                        <div class="card-body" id="lecture">
+                            <div class="row" >
+                               <div class="card-img-container"><img  style="height:120px; border-radius: 100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                <div class = "col-sm-4">
+                                    <div class="card card-shadow">
+                                            <div class="card-body">
+                                                <h4 class="card-title"><b>Adding Single-Digit Numbers (basic)</b></h4>
+                                                    <p class="card-text">Enjoy learning: </p>
+                                                    <iframe width="300" height="200" src="https://www.youtube.com/embed/tVHOBVAFjUw?si=Kc6JSKv9bD_DiFQB"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-sm-4">
+                                        <div class="card card-shadow">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><b>Adding Double-Digits Numbers </b></h4>
+                                                        <p class="card-text">Enjoy learning:</p>
+                                                        <iframe width="300" height="200" src="https://www.youtube.com/embed/Q9sLfMrH8_w?si=uDA_CKTuI1_amQ05"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-sm-4">
+                                            <div class="card card-shadow">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Adding with Regrouping (Carrying) </b></h4>
+                                                            <p class="card-text">Enjoy learning: </p>
+                                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/_NN8g2jWIAs?si=AlwMgOHkBpw40tWy"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class = "col-sm-4">
+                                                <div class="card card-shadow">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><b>Adding Three or More Numbers: </b></h4>
+                                                                <p class="card-text">Enjoy learning: </p>
+                                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/OCMK-G1ZC5s?si=OMfTF-2Y6avPDRCK"></iframe>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class = "col-sm-4">
+                                                <div class="card card-shadow">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><b>Addition Word Problems (Average) </b></h4>
+                                                                <p class="card-text">Enjoy learning: </p>
+                                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/tbrh8q0QPvw?si=JoOLhgICPRNyvVme"></iframe>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class = "col-sm-4">
+                                                <div class="card card-shadow">
+                                                        <div class="card-body">
+                                                            <h4 class="card-title"><b>Properties of Addition (Average) </b></h4>
+                                                                <p class="card-text">Enjoy learning: </p>
+                                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/a0deCn5QNFI?si=KFrI6FLIDWKGftBr"></iframe>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComAddition('Menu1');">Back</a>  </div>
+                                   </div>
+                               </div>
+                               
+                          </div>
+                       </div>
+                    </div>
+                <div class="row" id="VideosAdd" style="display:none">
+                    <div class="col-sm-12">  
+                        <div class="card card-shadow">                        
+                            <div class="card-body" id="lecture">
+                                <div class="row" >
+                                   <div class="card-img-container"><img  style="height:100px;" src="https://miro.medium.com/v2/resize:fit:1025/1*37s0vlgwz_O0m0jAwDDl6g.png" alt="Card image" id="Lec"></div>
+                                           <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Adding Single-Digit Numbers (Basic)</b></h4>
+                                                            <a><img class="image-materials" src="https://cdn.sanity.io/images/zm8ai1fm/production/d1c7e836afb1b6b4066299701a7a94989caca87e-960x613.jpg" alt="Adding Single-Digit Numbers"></a>
+                                                            <a href="addition_practice_learn.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                       <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Adding Double-Digits Numbers </b></h4>
+                                                            <a><img class="image-materials" src="" alt="Adding Single-Digit Numbers"></a>
+                                                            <a href="two_digit_number.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Adding with Regrouping (Carrying)</b></h4>
+                                                            <a><img class="image-materials" src="https://i.pinimg.com/474x/f5/fa/d5/f5fad5f95866b710ef8fd247424193fc.jpg" alt="Adding Single-Digit Numbers"></a>
+                                                            <a href="two_digit_carry.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Adding Three Digit Numbers: </b></h4>
+                                                            <a><img class="image-materials" src="https://www.wikihow.com/images/thumb/6/6e/Add-Large-Numbers-Step-3-Version-3.jpg/v4-460px-Add-Large-Numbers-Step-3-Version-3.jpg.webp" alt="Adding Single-Digit Numbers"></a>
+                                                            <a href="adding_3digit.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Addition Word Problems (Average)</b></h4>
+                                                            <a><img class="image-materials" src="https://i.pinimg.com/736x/13/c5/05/13c5056b1b99c8b887c6bcdbc55625c0.jpg"></a>
+                                                            <a href="3-wordproblem.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <div class="card card-shadow">
+                                                   <div class="card-body text-center">
+                                                       <h4 class="card-title"><b>Properties of Addition (Average)</b></h4>
+                                                            <a><img class="image-materials" src="https://i.pinimg.com/474x/fc/ef/65/fcef650ce8a8bf9aad9cea7c725e3c76.jpg"></a>
+                                                            <a href="properties_of_math.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                         </div>
+                                                    </div>
+                                              </div>
+                                            </div>
+                                                   <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComAddition('Menu1');">Back</a>  
+                                            </div>
+                                       </div>
+                                   </div>
+                              </div>
+                           </div>
+                        </div>
+                           <div class="row" id="QuizAdd" style="display:none">
+                            <div class="col-sm-12" id="hidden">  
+                                <div class="card card-shadow">                        
+                                    <div class="card-body" id="lecture">
+                                        <div class="row" >
+                                           <div class="card-img-container"><img  style="height:100px;" style="width: 100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                <h4 class="card-title"><b>Fun quiz for Addition!</b></h4>
+                                                                <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Adding Single-Digit Numbers (Basic)</b></h4>
+                                                                                <a><img class="image-materials" src="https://cdn.sanity.io/images/zm8ai1fm/production/d1c7e836afb1b6b4066299701a7a94989caca87e-960x613.jpg" alt="Adding Single-Digit Numbers"></a>
+                                                                                <a href="adding_quiz1.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Adding Double-Digits Numbers</b></h4>
+                                                                                <a><img class="image-materials" src="https://lh5.googleusercontent.com/proxy/3KKhCZQtUerVmHC2KcpoBgwWE1UZQyW9w2lVRoZn_gUECd3or6JVqcU3N6X_8Oy9RP0C_WFxCpnayN4P6FCdvM_ZrRoZO-t7Jc3JI41M2A" alt="Adding Single-Digit Numbers"></a>
+                                                                                <a href="adding_quiz2.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                 
+                                                                  <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Adding with Regrouping (Carrying)</b></h4>
+                                                                                <a><img class="image-materials" src="https://i.pinimg.com/474x/f5/fa/d5/f5fad5f95866b710ef8fd247424193fc.jpg" alt="Adding Single-Digit Numbers"></a>
+                                                                                <a href="adding_quiz3.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Adding Three Digit Numbers: </b></h4>
+                                                                                <a><img class="image-materials" src="https://www.wikihow.com/images/thumb/6/6e/Add-Large-Numbers-Step-3-Version-3.jpg/v4-460px-Add-Large-Numbers-Step-3-Version-3.jpg.webp" alt="Adding Single-Digit Numbers"></a>
+                                                                                <a href="adding_quiz4.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Addition Word Problems (Average)</b></h4>
+                                                                                <a><img class="image-materials" src="https://i.pinimg.com/736x/13/c5/05/13c5056b1b99c8b887c6bcdbc55625c0.jpg"></a>
+                                                                                <a href="adding_quiz5.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="col-sm-4">
+                                                                    <div class="card card-shadow">
+                                                                       <div class="card-body text-center">
+                                                                           <h4 class="card-title"><b>Properties of Addition (Average)</b></h4>
+                                                                                <a><img class="image-materials" src="https://i.pinimg.com/474x/fc/ef/65/fcef650ce8a8bf9aad9cea7c725e3c76.jpg"></a>
+                                                                                <a href="adding_quiz6.html" class="btn btn-primary btn-lg mt-3"> Start Learning</a>
+                                                                             </div>
+                                                                        </div>
+                                                                  </div>
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                            </div>
+                                                            </div>
+                                                        </div>   
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                              <div class = "container1" id="Subtraction-Menu">
+                                <div class="row" id="LectureSub" style="display:none">
+                                    <div class="col-sm-12">  
+                                        <div class="card card-shadow">                        
+                                            <div class="card-body" id="lecture">
+                                                <div class="row" >
+                                                   <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                   <div class = "col-sm-4">
+                                                    <div class="card card-shadow">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                                <p class="card-text">Try this other worksheets: </p>
+                                                                    <u>
+                                                                        <h3><a href ="img/subtraction1.1.gif" attributes-list download >Exercise 1</a></h3>
+                                                                        <h3><a href ="img/subtraction1.2.gif" attributes-list download >Exercise 2</a></h3>
+                                                                        <h3><a href ="img/subtraction1.3.webp" attributes-list download >Exercise 3</a></h3>
+                                                                        <h3><a href ="img/subtraction1.6.jpg" attributes-list download >Exercise 4</a></h3>
+                                                                        <h3><a href ="img/subtraction1.7.gif" attributes-list download >Exercise 5</a></h3>
+                                                                    </u>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="card card-shadow">
+                                                                    <div class="card-body">
+                                                                        <h4 class="card-title">Lecture Material for Subtraction</h4>
+                                                                          <p class="card-text">Start your learning</p>
+                                                                          <iframe width="700" height="500" src="https://www.youtube.com/embed/OH9jWONFHaw"></iframe>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> 
+                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComSubration('Menu2');">Back</a></div>
+                                                       </div>
+                                                   </div>
+                                                   
+                                              </div>
+                                           </div>
+                                        </div>
+                                    <div class="row" id="VideosSub" style="display:none">
+                                        <div class="col-sm-12">  
+                                            <div class="card card-shadow">                        
+                                                <div class="card-body" id="lecture">
+                                                    <div class="row" >
+                                                       <div class="card-img-container"><img  style="height:100px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                            <div class="col-sm-12" >
+                                                                <div class="card card-shadow">
+                                                                        <div class="card-body">
+                                                                            <h4 class="card-title">Lecture videos for Subtraction</h4>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/78btDdQ28XE"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/CM0Rqt2BN7k"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/f43k3hmxC8o"></iframe>
+                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/myaQw2RIixo"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComSubration('Menu2');">Back</a></div> 
+                                                                </div>
+                                                           </div>
+                                                       </div>
+                                                  </div>
+                                               </div>
+                                            
+                                               <div class="row" id="QuizSub" style="display:none">
+                                                <div class="col-sm-12">  
+                                                    <div class="card card-shadow">                        
+                                                        <div class="card-body" id="lecture">
+                                                            <div class="row" >
+                                                               <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="card card-shadow">
+                                                                                <div class="card-body">
+                                                                                    <h4 class="card-title">Fun quiz for Subtraction</h4>
+                                                                                    <p style="font-size: 18px;">After learning about Subtraction, try to answer this fun quiz using pen and paper! </p>
+                                                                                    <p style="font-size: 18px;">After answering the question, ask the teacher or parent to check your answer.</p>
+                                                                                    <iframe width="700" height="500" src="https://www.youtube.com/embed/O7pncpc-QJ4"></iframe>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a> 
+                                                                        </div>
+                                                                   </div>
+                                                               </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class = "container1" id="Multiplication-Menu">
+                                                    <div class="row" id="LectureMul" style="display: none;">
+                                                        <div class="col-sm-12">  
+                                                            <div class="card card-shadow">                        
+                                                                <div class="card-body" id="lecture">
+                                                                    <div class="row" >
+                                                                       <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                       <div class = "col-sm-4">
+                                                                        <div class="card card-shadow">
+                                                                                <div class="card-body">
+                                                                                    <h4 class="card-title"><b>Lecture Materials</b></h4>
+                                                                                    <p class="card-text">Try this other worksheets: </p>
+                                                                                        <u>
+                                                                                            <h3><a href ="mathematics-grade-3-1.1 (1).pdf" attributes-list download >Exercise 1</a></h3>
+                                                                                            <h3><a href ="https://www.centralriversaea.org/wp-content/uploads/2017/03/Math-3.pdf" attributes-list download >Exercise 2</a></h3>
+                                                                                            <h3><a href ="img/multi-digit-multiplication.png" attributes-list download >Exercise 3</a></h3>
+                                                                                            <h3><a href ="img/mul.jpg" attributes-list download >Exercise 4</a></h3>
+                                                                                            <h3><a href ="img/multiplication2.png" attributes-list download >Exercise 5</a></h3>
+                                                                                        </u>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                            <div class="col-sm-8">
+                                                                                <div class="card card-shadow">
+                                                                                        <div class="card-body">
+                                                                                            <h4 class="card-title">Lecture Material for Multiplication</h4>
+                                                                                            <p class="card-text">Start your learning</p>
+                                                                                            <iframe width="700" height="500" src="https://www.youtube.com/embed/s-PPjXREXm8"></iframe>
+                                                                                        </div>
+                                                                                    </div> 
+                                                                                </div>
+                                                                           </div>
+                                                                           <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultiplication('Menu3');">Back</a></div>
+                                                                       </div>
+                                                                  </div>
+                                                                     
+                                                               </div>
+                                                            </div>
+                                                        <div class="row" id="VideosMul" style="display: none;">
+                                                            <div class="col-sm-12">  
+                                                                <div class="card card-shadow">                        
+                                                                    <div class="card-body" id="lecture">
+                                                                        <div class="row" >
+                                                                           <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                <div class="col-sm-12" >
+                                                                                    <div class="card card-shadow">
+                                                                                            <div class="card-body">
+                                                                                                <h4 class="card-title">Lecture Videos for Multiplication</h4>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/dPksJHBZs4Q"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/6fuGzrDk--Q"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/CFDCG1b4ahk"></iframe>
+                                                                                                <iframe width="500" height="300" src="https://www.youtube.com/embed/dkWvwUheqfY"></iframe>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultiplication('Menu3');">Back</a></div> 
+                                                                                    </div>
+                                                                               </div>
+                                                                           </div>
+                                                                      </div>
+                                                                   </div>
+                                                                
+                                                                   <div class="row" id="QuizMul" style="display: none;">
+                                                                    <div class="col-sm-12">  
+                                                                        <div class="card card-shadow">                        
+                                                                            <div class="card-body" id="lecture">
+                                                                                <div class="row" >
+                                                                                   <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                        <div class="col-sm-12">
+                                                                                            <div class="card card-shadow">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title">Fun quiz about Multiplication</h4>
+                                                                                                        <p style="font-size: 18px;">After learning about Multiplication, try to answer this fun quiz using pen and paper! </p>
+                                                                                                        <p style="font-size: 18px;">After answering the question, ask the teacher and parent to check your answer.</p>
+                                                                                                          <iframe width="700" height="500" src="https://www.youtube.com/embed/zKepVi91u4A"></iframe>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                        </div>
+                                                                                       </div>
+                                                                                   </div>
+                                                                              </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class = "container1" id="Division-Menu">
+                                                                        <div class="row" id="LectureDiv" style="display: none;">
+                                                                            <div class="col-sm-12">  
+                                                                                <div class="card card-shadow">                        
+                                                                                    <div class="card-body" id="lecture">
+                                                                                        <div class="row" >
+                                                                                           <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                                           <div class = "col-sm-4">
+                                                                                            <div class="card card-shadow">
+                                                                                                    <div class="card-body">
+                                                                                                        <h4 class="card-title">Lecture Materials</h4>
+                                                                                                            <p class="card-text">For other information check this link:</p>
+                                                                                                            <u>
+                                                                                                                <h3><a href ="http://amsi.org.au/teacher_modules/pdfs/Division_of_whole_numbers.pdf" attributes-list download >Lesson 1 about Division</a></h3>
+                                                                                                                <h3><a href ="https://media.openschool.bc.ca/osbcmedia/math/math5/etext/m5-p2-division.pdf" attributes-list download >Lesson 2 about Division</a></h3>
+                                                                                                                <h3><a href ="https://learn.mindset.africa/sites/default/files/resourcelib/emshare-show-note-asset/4288_fdoc.pdf" attributes-list download >Lesson 3 about Division</a></h3>
+                                                                                                                <h3><a href ="https://www.englishwsheets.com/grade-1-division-p1.html" attributes-list download >Lesson 4 about Division</a></h3>
+                                                                                                            </u>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                                <div class="col-sm-8">
+                                                                                                    <div class="card card-shadow">
+                                                                                                            <div class="card-body">
+                                                                                                                <h4 class="card-title">Lecture materials for Division</h4>
+                                                                                                                  <p class="card-text">Start your learning</p>
+                                                                                                                  <iframe width="700" height="500" src="https://www.youtube.com/embed/rGMecZ_aERo"></iframe>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div> 
+                                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComDivision('Menu4');">Back</a></div>
+                                                                                           </div>
+                                                                                      </div>
+                                                                                   </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            <div class="row" id="VideosDiv" style="display: none;">
+                                                                                <div class="col-sm-12">  
+                                                                                    <div class="card card-shadow">                        
+                                                                                        <div class="card-body" id="lecture">
+                                                                                            <div class="row" >
+                                                                                               <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                                    <div class="col-sm-12" >
+                                                                                                        <div class="card card-shadow">
+                                                                                                                <div class="card-body">
+                                                                                                                    <h4 class="card-title">Lecture Videos for Division</h4>
+                                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/BsUE_o13758"></iframe>
+                                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/HdU_rf7eMTI"></iframe>
+                                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/le_OE27ysuU"></iframe>
+                                                                                                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/rGMecZ_aERo"></iframe>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            
+                                                                                                            <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComDivision('Menu4');">Back</a></div> 
+                                                                                                        </div>
+                                                                                                   </div>
+                                                                                               </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                       <div class="row" id="QuizDiv" style="display: none;">
+                                                                                        <div class="col-sm-12">  
+                                                                                            <div class="card card-shadow">                        
+                                                                                                <div class="card-body" id="lecture">
+                                                                                                    <div class="row" >
+                                                                                                       <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                                            <div class="col-sm-12">
+                                                                                                                <div class="card card-shadow">
+                                                                                                                        <div class="card-body">
+                                                                                                                            <h4 class="card-title">Fun quiz about Division</h4>
+                                                                                                                            <p style="font-size: 18px;">After learning about Division, try to answer this fun quiz using pen and paper! </p>
+                                                                                                                            <p style="font-size: 18px;">After answering the question, ask the teacher or parent to check your answer.</p>
+                                                                                                                              <iframe width="700" height="500" src="https://www.youtube.com/embed/zjSMQhhoBU8"></iframe>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>   
+                                                                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                                                </div>
+                                                                                                           </div>
+                                                                                                       </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                </div>
+                                                                                                        <div class = "container1" id="Compare-Menu">
+                                                                                                            <div class="row" id="LectureCompare" style="display: none;">
+                                                                                                                <div class="col-sm-12">  
+                                                                                                                    <div class="card card-shadow">                        
+                                                                                                                        <div class="card-body" id="lecture">
+                                                                                                                            <div class="row" >
+                                                                                                                                <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                                                                                    <div class = "col-sm-4">
+                                                                                                                                        <div class="card card-shadow">
+                                                                                                                                                <div class="card-body">
+                                                                                                                                                    <h4 class="card-title">Lecture Materials</h4>
+                                                                                                                                                        <p class="card-text">For other information check this link:</p>
+                                                                                                                                                        <u>
+                                                                                                                                                            <h3><a href ="http://amsi.org.au/teacher_modules/pdfs/Division_of_whole_numbers.pdf" attributes-list download >Lesson 1 about Greater than and Less than</a></h3>
+                                                                                                                                                            <h3><a href ="https://media.openschool.bc.ca/osbcmedia/math/math5/etext/m5-p2-division.pdf" attributes-list download >Lesson 2 about Greater than and Less than</a></h3>
+                                                                                                                                                            <h3><a href ="https://learn.mindset.africa/sites/default/files/resourcelib/emshare-show-note-asset/4288_fdoc.pdf" attributes-list download >Lesson 3 about Greater than and Less than</a></h3>
+                                                                                                                                                            <h3><a href ="https://www.englishwsheets.com/grade-1-division-p1.html" attributes-list download >Lesson 4 about Division Greater than and Less than</a></h3>
+                                                                                                                                                      </u>
+                                                                                                                                                </div>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
+                                                                                                                                <div class="col-sm-8">
+                                                                                                                        <div class="card card-shadow">
+                                                                                                                                <div class="card-body">
+                                                                                                                                    <h4 class="card-title">Lecture materials for Compare Number</h4>
+                                                                                                                                    <p class="card-text">Start your learning</p>
+                                                                                                                                    <iframe width="700" height="500"src="https://www.youtube.com/embed/ka9zbPcqXBI"></iframe>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                            </div> 
+                                                                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('Menu5');">Back</a>
+                                                                                                                        </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                <div class="row" id="VideosCompare" style="display: none;">
+                                                                                                    <div class="col-sm-12">  
+                                                                                                        <div class="card card-shadow">                        
+                                                                                                            <div class="card-body" id="lecture">
+                                                                                                                <div class="row" >
+                                                                                                                <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                                                        <div class="col-sm-12" >
+                                                                                                                            <div class="card card-shadow">
+                                                                                                                                    <div class="card-body">
+                                                                                                                                        <h4 class="card-title">Lecture videos for Compare Numbers</h4>
+                                                                                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/3qisu9NF1_0"></iframe>
+                                                                                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/Qn87cKHa7v4"></iframe>
+                                                                                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/vbIB9yQTPQ0"></iframe>
+                                                                                                                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/E34PAOGYRNk"></iframe>
+                                                                                                                                        </div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComCompare('Menu5');">Back</a>   
+                                                                                                                            </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        <div class="row" id="QuizCompare" style="display: none;">
+                                                                                                            <div class="col-sm-12">  
+                                                                                                                <div class="card card-shadow">                        
+                                                                                                                    <div class="card-body" id="lecture">
+                                                                                                                        <div class="row" >
+                                                                                                                        <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                                                        <div class="col-sm-12">
+                                                                                                                    <div class="card card-shadow">
+                                                                                                                <div class="card-body">
+                                                                                                            <h4 class="card-title">Fun Quiz for Compare Numbers</h4>
+                                                                                                            <p style="font-size: 18px;">After learning about Compare Numbers, try to answer this fun quiz using pen and paper! </p>
+                                                                                                            <p style="font-size: 18px;">After answering the question, ask the teacher or parent to check your answer.</p>
+                                                                                                            <iframe width="700" height="500" src="https://www.youtube.com/embed/pfcOTovJ7NQ"></iframe>
+                                                                                                       </div>
+                                                                                                       <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                                    </div>
+                                                                                                </div>   
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                        <div class = "container1" id="Division-Menu">
+                                                                            <div class="row" id="LectureMultip" style="display: none;">
+                                                                                <div class="col-sm-12">  
+                                                                                    <div class="card card-shadow">                        
+                                                                                        <div class="card-body" id="lecture">
+                                                                                            <div class="row" >
+                                                                                            <div class="card-img-container"><img  style="height:100px;"  style ="font-size: 18px;" src="img/LearningMaterials.png" alt="Card image" id="Lec"></div>
+                                                                                            <div class = "col-sm-4">
+                                                                                                <div class="card card-shadow">
+                                                                                                        <div class="card-body">
+                                                                                                            <h4 class="card-title">Lecture Materials for Multiplication Table</h4>
+                                                                                                                <p class="card-text">For other information check this link:</p>
+                                                                                                                <u>
+                                                                                                                
+                                                                                                                    <h3><a href ="http://amsi.org.au/teacher_modules/pdfs/Division_of_whole_numbers.pdf" attributes-list download >Lesson 1 about Multipllication Table</a></h3>
+                                                                                                                    <h3><a href ="https://media.openschool.bc.ca/osbcmedia/math/math5/etext/m5-p2-division.pdf" attributes-list download >Lesson 2 about Multipllication Table</a></h3>
+                                                                                                                    <h3><a href ="https://learn.mindset.africa/sites/default/files/resourcelib/emshare-show-note-asset/4288_fdoc.pdf" attributes-list download >Lesson 3 about Multipllication Table</a></h3>
+                                                                                                                    <h3><a href ="https://www.englishwsheets.com/grade-1-division-p1.html" attributes-list download >Lesson 4 about Multipllication Table</a></h3>
+                                                                                                                </u>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                    <div class="col-sm-8">
+                                                                                                        <div class="card card-shadow">
+                                                                                                                <div class="card-body">
+                                                                                                                    <h4 class="card-title">MULTIPLICATION TABLE</h4>
+                                                                                                                    <p class="card-text">Start your learning</p>
+                                                                                                                    <iframe width="700" height="500"src="https://www.youtube.com/embed/YbNxKXXBbvo"></iframe>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div> 
+                                                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('Menu6');">Back</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                     </div>
+                                                                                 </div>
+                                                                            </div>
+                                                                                <div class="row" id="VideosMultip" style="display: none;">
+                                                                                    <div class="col-sm-12">  
+                                                                                        <div class="card card-shadow">                        
+                                                                                            <div class="card-body" id="lecture">
+                                                                                                <div class="row" >
+                                                                                                <div class="card-img-container"><img  style="height:100px;" src="img/video.png" alt="Card image" id="Lec"></div>
+                                                                                                        <div class="col-sm-12">
+                                                                                                            <div class="card card-shadow">
+                                                                                                                    <div class="card-body">
+                                                                                                                        <h4 class="card-title">Lecture videos for Multiplication Table</h4>
+                                                                                                                        <ul>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/YbNxKXXBbvo"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/oPINS56lDes"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/E3jngtB82V0"></iframe>
+                                                                                                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/RLBnSisLS3I"></iframe>
+                                                                                                                        </ul>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                            </div>
+                                                                                                                  <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="LectureComMultip('Menu6');">Back</a>   
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    <div class="row" id="QuizMultip" style="display: none;">
+                                                                                            <div class="col-sm-12">  
+                                                                                                <div class="card card-shadow">                        
+                                                                                                    <div class="card-body" id="lecture">
+                                                                                                        <div class="row" >
+                                                                                                        <div class="card-img-container"><img  style="height:100px;" src="img/LearningMaterials1.jpg" alt="Card image" id="Lec"></div>
+                                                                                                        <div class = "col-sm-12">
+                                                                                                            <div class="card card-shadow">
+                                                                                                                    <div class="card-body">
+                                                                                                                        <h4 class="card-title">Fun Quiz for Multiplication Table</h4>
+                                                                                                                        <p style="font-size: 18px;">After learning about Multiplication Table, try to answer this fun quiz using pen and paper! </p>
+                                                                                                                        <p style="font-size: 18px;">After answering the question, ask the teacher or parent to check your answer.</p>
+                                                                                                                        <iframe width="700" height="500"src="https://www.youtube.com/embed/bn-5zhqcDjA"></iframe>
+                                                                                                                    </div>
+
+                                                                                                                    <div style="text-align:right;"><a href="#" class="btn btn-primary btn-lg"  style ="font-size: 18px;" onclick="showDiv('Menu');">FINISH</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                      </div>   
+                                                                                                  </div>
+                                                                                             </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </body>
+                                                                          </html>
